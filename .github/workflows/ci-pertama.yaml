@@ -1,0 +1,19 @@
+name: Review Code
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  tes-bisa-jalan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mengambil kode dari github
+      uses: action/chechout@v4
+
+    - name: Menyapa pembuat
+      run:  |
+        echo "Halo! script CI/CD berhasil dipicu"
+        echo "Sedang memeriksa isi folder:"
+        ls -la
