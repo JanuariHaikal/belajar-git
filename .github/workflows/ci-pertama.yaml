@@ -1,19 +1,19 @@
-name: Review Code
+name: Robot Pengecek Kode
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
 
 jobs:
   tes-bisa-jalan:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Mengambil kode dari github
-      uses: action/chechout@v4
+    - name: Mengambil Kode dari GitHub
+      uses: actions/checkout@v4
 
-    - name: Menyapa pembuat
-      run:  |
-        echo "Halo! script CI/CD berhasil dipicu"
-        echo "Sedang memeriksa isi folder:"
+    - name: Menyapa Pembuatnya
+      run: |
+        echo "Halo! Skrip CI/CD pertamamu berhasil dipicu!"
+        echo "Robot sedang memeriksa isi folder:"
         ls -la
